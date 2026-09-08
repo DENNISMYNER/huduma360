@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Huduma360 — Government Services, All in One Place</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="demo-banner">
+      Concept / demo platform — not an official government website. All data and
+      payments are simulated.
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="navbar-inner">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <a href="#" class="logo" id="logoHome">
+          <span class="logo-mark">H360</span>
+          <span class="logo-text">Huduma<b>360</b></span>
+        </a>
+
+        <div class="navbar-search">
+          <svg viewBox="0 0 24 24" class="icon">
+            <path
+              d="M21 21l-4.35-4.35M18 11a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+          <input
+            type="text"
+            id="navSearchInput"
+            placeholder="Search for a service, e.g. passport, land rates..."
+            autocomplete="off"
+          />
+        </div>
+
+        <nav class="navbar-links">
+          <a href="#applications" class="nav-link">My Applications</a>
+          <a href="#saved" class="nav-link">Saved</a>
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle dark mode"
+          >
+            <svg class="icon icon-sun" viewBox="0 0 24 24">
+              <circle
+                cx="12"
+                cy="12"
+                r="4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            <svg class="icon icon-moon" viewBox="0 0 24 24">
+              <path
+                d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </nav>
+      </div>
+
+      <!-- mobile search shown under navbar on small screens -->
+      <div class="navbar-search navbar-search-mobile">
+        <svg viewBox="0 0 24 24" class="icon">
+          <path
+            d="M21 21l-4.35-4.35M18 11a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </svg>
+        <input
+          type="text"
+          id="navSearchInputMobile"
+          placeholder="Search for a service..."
+          autocomplete="off"
+        />
+      </div>
+    </header>
+
+    <!-- MOBILE DRAWER -->
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <nav class="drawer" id="drawer">
+      <div class="drawer-header">
+        <span class="logo-text">Huduma<b>360</b></span>
+        <button id="drawerClose" aria-label="Close menu">&times;</button>
+      </div>
+      <a href="#home" class="drawer-link" data-close>Home</a>
+      <a href="#categories" class="drawer-link" data-close
+        >Service Categories</a
+      >
+      <a href="#applications" class="drawer-link" data-close>My Applications</a>
+      <a href="#saved" class="drawer-link" data-close>Saved Services</a>
+      <a href="#announcements" class="drawer-link" data-close>Announcements</a>
+    </nav>
+
+    <main id="mainContent">
+      <!-- HERO -->
+      <section class="hero" id="home">
+        <div class="hero-inner">
+          <p class="hero-eyebrow">
+            A single doorway into Kenya's public services
+          </p>
+          <h1 class="hero-title">
+            Essential government services, all in one place
+          </h1>
+          <p class="hero-sub">
+            Find, understand, and apply for national and county services — from
+            IDs and passports to land records and business permits — without
+            hunting across a dozen sites.
+          </p>
+
+          <form class="hero-search" id="heroSearchForm">
+            <svg viewBox="0 0 24 24" class="icon">
+              <path
+                d="M21 21l-4.35-4.35M18 11a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            <input
+              type="text"
+              id="heroSearchInput"
+              placeholder="What service are you looking for?"
+              autocomplete="off"
+            />
+            <button type="submit">Search</button>
+          </form>
+          <div class="hero-suggestions" id="heroSuggestions"></div>
+
+          <div class="quick-actions" id="quickActions"></div>
+        </div>
+      </section>
+
+      <!-- SEARCH RESULTS (hidden by default) -->
+      <section class="search-results" id="searchResultsSection" hidden>
+        <div class="section-inner">
+          <div class="section-head">
+            <h2 id="searchResultsTitle">Results</h2>
+            <button class="text-btn" id="clearSearchBtn">Clear search</button>
+          </div>
+          <div class="results-grid" id="searchResultsGrid"></div>
+          <div class="empty-state" id="searchEmptyState" hidden>
+            <p class="empty-title">No matching services</p>
+            <p class="empty-sub">
+              Try a different keyword, or browse the categories below.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div id="browseWrap">
+        <!-- POPULAR SERVICES -->
+        <section class="section" id="popular">
+          <div class="section-inner">
+            <div class="section-head">
+              <h2>Popular services</h2>
+              <p class="section-sub">Most accessed this month</p>
+            </div>
+            <div class="popular-row" id="popularRow"></div>
+          </div>
+        </section>
+
+        <!-- CATEGORIES -->
+        <section class="section" id="categories">
+          <div class="section-inner">
+            <div class="section-head">
+              <h2>Browse by category</h2>
+              <p class="section-sub">
+                10 categories covering national and county services
+              </p>
+            </div>
+            <div class="category-grid" id="categoryGrid"></div>
+          </div>
+        </section>
+
+        <!-- RECENTLY VIEWED -->
+        <section class="section" id="recent">
+          <div class="section-inner">
+            <div class="section-head">
+              <h2>Recently viewed</h2>
+            </div>
+            <div class="popular-row" id="recentRow"></div>
+            <p class="empty-inline" id="recentEmpty" hidden>
+              Services you view will show up here.
+            </p>
+          </div>
+        </section>
+
+        <!-- MY APPLICATIONS -->
+        <section class="section" id="applications">
+          <div class="section-inner">
+            <div class="section-head">
+              <h2>My applications</h2>
+              <p class="section-sub">
+                Track the status of services you've applied for
+              </p>
+            </div>
+            <div class="applications-list" id="applicationsList"></div>
+          </div>
+        </section>
+
+        <!-- SAVED SERVICES -->
+        <section class="section" id="saved">
+          <div class="section-inner">
+            <div class="section-head">
+              <h2>Saved services</h2>
+            </div>
+            <div class="popular-row" id="savedRow"></div>
+            <p class="empty-inline" id="savedEmpty" hidden>
+              Save a service to find it here quickly next time.
+            </p>
+          </div>
+        </section>
+
+        <!-- ANNOUNCEMENTS -->
+        <section class="section" id="announcements">
+          <div class="section-inner">
+            <div class="section-head">
+              <h2>Announcements</h2>
+            </div>
+            <div class="announcement-list" id="announcementList"></div>
+          </div>
+        </section>
+      </div>
+
+      <!-- CATEGORY DETAIL VIEW -->
+      <section class="category-view" id="categoryView" hidden>
+        <div class="section-inner">
+          <button class="back-btn" id="categoryBackBtn">&larr; Back</button>
+          <div class="category-view-head" id="categoryViewHead"></div>
+          <div class="subcat-tabs" id="subcatTabs"></div>
+          <div class="results-grid" id="categoryServicesGrid"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-mark">H360</span>
+          <span class="logo-text">Huduma<b>360</b></span>
+          <p class="footer-tag">
+            A concept platform demonstrating what a unified Kenyan government
+            services experience could look like. Built as a portfolio project —
+            not affiliated with the Government of Kenya.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="#categories">All categories</a>
+          <a href="#popular">Popular services</a>
+          <a href="#applications">My applications</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="#announcements">Announcements</a>
+          <a href="#" data-info="help">Help centre</a>
+          <a href="#" data-info="accessibility">Accessibility</a>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="#" data-info="about">About this project</a>
+          <a href="#" data-info="privacy">Privacy (demo)</a>
+          <a href="#" data-info="contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span
+          >&copy; 2026 Huduma360 — a concept project. Not a government
+          website.</span
+        >
+      </div>
+    </footer>
+
+    <!-- SERVICE DETAIL MODAL -->
+    <div class="modal-overlay" id="serviceModalOverlay">
+      <div
+        class="modal service-modal"
+        id="serviceModal"
+        role="dialog"
+        aria-modal="true"
+      >
+        <button class="modal-close" id="serviceModalClose" aria-label="Close">
+          &times;
+        </button>
+        <div class="modal-body" id="serviceModalBody"></div>
+      </div>
+    </div>
+
+    <!-- APPLICATION FLOW MODAL -->
+    <div class="modal-overlay" id="applyModalOverlay">
+      <div
+        class="modal apply-modal"
+        id="applyModal"
+        role="dialog"
+        aria-modal="true"
+      >
+        <button class="modal-close" id="applyModalClose" aria-label="Close">
+          &times;
+        </button>
+        <div class="modal-body" id="applyModalBody"></div>
+      </div>
+    </div>
+
+    <!-- INFO MODAL (footer links) -->
+    <div class="modal-overlay" id="infoModalOverlay">
+      <div
+        class="modal info-modal"
+        id="infoModal"
+        role="dialog"
+        aria-modal="true"
+      >
+        <button class="modal-close" id="infoModalClose" aria-label="Close">
+          &times;
+        </button>
+        <div class="modal-body" id="infoModalBody"></div>
+      </div>
+    </div>
+
+    <!-- TOASTS -->
+    <div class="toast-stack" id="toastStack"></div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
