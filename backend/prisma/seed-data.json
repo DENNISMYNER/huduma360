@@ -1,0 +1,1527 @@
+{
+  "CATEGORIES": [
+    {
+      "id": "health",
+      "name": "Health",
+      "icon": "🏥",
+      "desc": "Coverage, facilities and medical services"
+    },
+    {
+      "id": "land",
+      "name": "Land & Housing",
+      "icon": "🏠",
+      "desc": "Land records, titles, rates and housing programs"
+    },
+    {
+      "id": "identity",
+      "name": "Identity & Civil Registration",
+      "icon": "🪪",
+      "desc": "IDs, certificates and passports"
+    },
+    {
+      "id": "transport",
+      "name": "Transport",
+      "icon": "🚗",
+      "desc": "Licences, vehicles and road services"
+    },
+    {
+      "id": "education",
+      "name": "Education",
+      "icon": "🎓",
+      "desc": "Placement, funding and student services"
+    },
+    {
+      "id": "business",
+      "name": "Business",
+      "icon": "💼",
+      "desc": "Registration, permits and licensing"
+    },
+    {
+      "id": "tax",
+      "name": "Taxes & Revenue",
+      "icon": "💰",
+      "desc": "KRA services, returns and compliance"
+    },
+    {
+      "id": "justice",
+      "name": "Justice & Legal",
+      "icon": "⚖️",
+      "desc": "Courts, case tracking and legal aid"
+    },
+    {
+      "id": "agriculture",
+      "name": "Agriculture",
+      "icon": "🌾",
+      "desc": "Farmer support, subsidies and licences"
+    },
+    {
+      "id": "county",
+      "name": "County Services",
+      "icon": "🏛️",
+      "desc": "Local permits, rates and county contacts"
+    }
+  ],
+  "SERVICES": [
+    {
+      "id": "h1",
+      "categoryId": "health",
+      "name": "SHA Registration & Coverage",
+      "desc": "Register for the Social Health Authority (SHA) scheme and check your coverage status.",
+      "fee": 0,
+      "processingTime": "Instant – 2 days",
+      "eligibility": [
+        "Kenyan citizen aged 18+",
+        "Valid National ID"
+      ],
+      "documents": [
+        "National ID",
+        "Phone number for verification",
+        "KRA PIN (optional)"
+      ],
+      "steps": [
+        "Provide your National ID number",
+        "Verify your phone number via OTP",
+        "Choose your household details",
+        "Confirm registration"
+      ],
+      "popular": true
+    },
+    {
+      "id": "h2",
+      "categoryId": "health",
+      "name": "Find a Health Facility",
+      "desc": "Search public, private and faith-based health facilities near you by county and services offered.",
+      "fee": 0,
+      "processingTime": "Instant",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "h3",
+      "categoryId": "health",
+      "name": "Health Insurance Services",
+      "desc": "Manage contributions, view claims and update your SHA/insurance details.",
+      "fee": 0,
+      "processingTime": "1–3 working days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "h4",
+      "categoryId": "health",
+      "name": "NHIF/SHA Information",
+      "desc": "View historical NHIF records and understand the transition to SHA.",
+      "fee": 0,
+      "processingTime": "Instant",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "h5",
+      "categoryId": "health",
+      "name": "Medical Assistance Fund",
+      "desc": "Apply for the Emergency Medical Fund for critical or emergency treatment support.",
+      "fee": 0,
+      "processingTime": "5–10 working days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID",
+        "Medical report from a licensed facility",
+        "Cost estimate from hospital"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "h6",
+      "categoryId": "health",
+      "name": "Medical / Health Certificate",
+      "desc": "Apply for an official medical fitness certificate for employment, school or travel.",
+      "fee": 1050,
+      "processingTime": "3–5 working days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID",
+        "Referral or request letter",
+        "Passport photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "l1",
+      "categoryId": "land",
+      "name": "Land Search",
+      "desc": "Search land ownership, encumbrance and registration details for a parcel.",
+      "fee": 500,
+      "processingTime": "3–7 working days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "Parcel/title number",
+        "National ID"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": true
+    },
+    {
+      "id": "l2",
+      "categoryId": "land",
+      "name": "Title Deed Services",
+      "desc": "Apply for a new title deed, replacement, or transfer of ownership.",
+      "fee": 5000,
+      "processingTime": "2–4 weeks",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID",
+        "Land control board consent",
+        "Signed transfer forms"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "l3",
+      "categoryId": "land",
+      "name": "Land Rates Payment",
+      "desc": "Check and pay outstanding land rates for a property.",
+      "fee": 0,
+      "processingTime": "Instant",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "l4",
+      "categoryId": "land",
+      "name": "Property Information",
+      "desc": "View zoning, valuation and registered property details.",
+      "fee": 300,
+      "processingTime": "1–3 working days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "l5",
+      "categoryId": "land",
+      "name": "Housing Programs",
+      "desc": "Browse affordable housing units and check application eligibility.",
+      "fee": 0,
+      "processingTime": "Varies",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "l6",
+      "categoryId": "land",
+      "name": "Affordable Housing Application",
+      "desc": "Apply for a unit under the Affordable Housing Programme.",
+      "fee": 0,
+      "processingTime": "4–8 weeks",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID",
+        "KRA PIN",
+        "Proof of income",
+        "Boma Yangu account"
+      ],
+      "steps": [
+        "Register on the housing portal",
+        "Save towards your deposit",
+        "Select a project and unit",
+        "Submit application for review",
+        "Await allocation notification"
+      ],
+      "popular": true
+    },
+    {
+      "id": "i1",
+      "categoryId": "identity",
+      "name": "National ID Application",
+      "desc": "Apply for a first-time National Identity Card.",
+      "fee": 0,
+      "processingTime": "2–4 weeks",
+      "eligibility": [
+        "Kenyan citizen aged 18 or turning 18"
+      ],
+      "documents": [
+        "Birth certificate",
+        "Parents' National IDs",
+        "Passport photo"
+      ],
+      "steps": [
+        "Visit or start application online",
+        "Fill in Huduma Namba details",
+        "Book biometric capture appointment",
+        "Attend appointment for fingerprints & photo",
+        "Collect ID or request delivery"
+      ],
+      "popular": true
+    },
+    {
+      "id": "i2",
+      "categoryId": "identity",
+      "name": "Birth Certificate",
+      "desc": "Apply for a new birth certificate or a certified copy.",
+      "fee": 150,
+      "processingTime": "5–10 working days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "Notification of birth",
+        "Parents' National IDs",
+        "Hospital discharge summary"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": true
+    },
+    {
+      "id": "i3",
+      "categoryId": "identity",
+      "name": "Death Certificate",
+      "desc": "Register a death and apply for an official death certificate.",
+      "fee": 150,
+      "processingTime": "5–10 working days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "Notification of death",
+        "Burial permit",
+        "Next of kin ID"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "i4",
+      "categoryId": "identity",
+      "name": "Passport Services",
+      "desc": "Apply for a new passport, renewal, or replacement of a lost passport.",
+      "fee": 7550,
+      "processingTime": "10–15 working days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID",
+        "Birth certificate",
+        "Passport photo (white background)",
+        "Old passport (if renewing)"
+      ],
+      "steps": [
+        "Complete the online application",
+        "Pay the passport fee",
+        "Book an appointment at a passport office",
+        "Submit biometrics in person",
+        "Collect your passport or request delivery"
+      ],
+      "popular": true
+    },
+    {
+      "id": "i5",
+      "categoryId": "identity",
+      "name": "Marriage Certificate",
+      "desc": "Register a civil, customary or religious marriage and obtain a certificate.",
+      "fee": 2600,
+      "processingTime": "5–15 working days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National IDs of both parties",
+        "Passport photos",
+        "Sworn affidavit (customary marriages)"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "i6",
+      "categoryId": "identity",
+      "name": "Citizenship Services",
+      "desc": "Apply for citizenship by registration, birth confirmation, or dual citizenship.",
+      "fee": 10000,
+      "processingTime": "3–6 months",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "Proof of residency",
+        "National ID or foreign passport",
+        "Supporting affidavits"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "t1",
+      "categoryId": "transport",
+      "name": "Driving Licence",
+      "desc": "Apply for a new driving licence or renew an existing one.",
+      "fee": 3050,
+      "processingTime": "5–10 working days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID",
+        "Certificate of good conduct",
+        "Medical report (Form 129)"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": true
+    },
+    {
+      "id": "t2",
+      "categoryId": "transport",
+      "name": "Vehicle Registration",
+      "desc": "Register a new or imported vehicle and obtain a logbook.",
+      "fee": 8000,
+      "processingTime": "7–14 working days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "Import declaration form",
+        "National ID / company PIN",
+        "Pre-export inspection certificate"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "t3",
+      "categoryId": "transport",
+      "name": "Vehicle Inspection",
+      "desc": "Book a mandatory inspection for commercial or PSV vehicles.",
+      "fee": 2500,
+      "processingTime": "Same day – 3 days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "t4",
+      "categoryId": "transport",
+      "name": "Number Plate Services",
+      "desc": "Apply for replacement, custom or additional number plates.",
+      "fee": 3000,
+      "processingTime": "5–10 working days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "t5",
+      "categoryId": "transport",
+      "name": "Driving Test Booking",
+      "desc": "Book a practical or theory driving test slot.",
+      "fee": 1000,
+      "processingTime": "Slot dependent",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "t6",
+      "categoryId": "transport",
+      "name": "Traffic Fine & Offence Services",
+      "desc": "Check and pay outstanding traffic offence notices (NTSA).",
+      "fee": 0,
+      "processingTime": "Instant",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "e1",
+      "categoryId": "education",
+      "name": "KUCCPS Placement",
+      "desc": "Apply for or check university and college placement.",
+      "fee": 0,
+      "processingTime": "Per admission cycle",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": true
+    },
+    {
+      "id": "e2",
+      "categoryId": "education",
+      "name": "HELB Loan Application",
+      "desc": "Apply for a HELB loan or bursary for higher education.",
+      "fee": 0,
+      "processingTime": "4–8 weeks",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID",
+        "Admission letter",
+        "Parent/guardian ID",
+        "Introduction letter from chief"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": true
+    },
+    {
+      "id": "e3",
+      "categoryId": "education",
+      "name": "Scholarships",
+      "desc": "Browse and apply for national and county government scholarships.",
+      "fee": 0,
+      "processingTime": "Varies",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "e4",
+      "categoryId": "education",
+      "name": "Student Services Portal",
+      "desc": "Manage your student profile, results slips and college transfers.",
+      "fee": 0,
+      "processingTime": "Instant – 3 days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "e5",
+      "categoryId": "education",
+      "name": "School Information",
+      "desc": "Search registered schools, capacity and NEMIS details.",
+      "fee": 0,
+      "processingTime": "Instant",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "e6",
+      "categoryId": "education",
+      "name": "Examination Services (KNEC)",
+      "desc": "Register for KCPE/KCSE exams and access results verification.",
+      "fee": 0,
+      "processingTime": "Per exam cycle",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "b1",
+      "categoryId": "business",
+      "name": "Business Name Registration",
+      "desc": "Register a sole proprietorship or partnership business name.",
+      "fee": 950,
+      "processingTime": "1–3 working days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID",
+        "Proposed business name(s)",
+        "KRA PIN"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": true
+    },
+    {
+      "id": "b2",
+      "categoryId": "business",
+      "name": "Business Permits",
+      "desc": "Apply for a single business permit for your trading premises.",
+      "fee": 0,
+      "processingTime": "3–5 working days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "b3",
+      "categoryId": "business",
+      "name": "Company Registration",
+      "desc": "Incorporate a limited company and obtain a certificate of incorporation.",
+      "fee": 10650,
+      "processingTime": "3–7 working days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National IDs of directors",
+        "KRA PINs of directors",
+        "Proposed company name"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "b4",
+      "categoryId": "business",
+      "name": "Business Licences",
+      "desc": "Apply for sector-specific operating licences (food, health, alcohol, etc).",
+      "fee": 0,
+      "processingTime": "Varies by licence",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "b5",
+      "categoryId": "business",
+      "name": "Business Name Search",
+      "desc": "Check availability of a proposed business or company name.",
+      "fee": 150,
+      "processingTime": "Instant – 1 day",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "b6",
+      "categoryId": "business",
+      "name": "eCitizen Business Services",
+      "desc": "Access linked business services such as tax compliance and permits.",
+      "fee": 0,
+      "processingTime": "Instant",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "x1",
+      "categoryId": "tax",
+      "name": "KRA PIN Registration",
+      "desc": "Register for a Personal Identification Number (PIN) with KRA.",
+      "fee": 0,
+      "processingTime": "Instant",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID",
+        "Email address"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": true
+    },
+    {
+      "id": "x2",
+      "categoryId": "tax",
+      "name": "File Tax Returns",
+      "desc": "File your annual individual or business income tax returns.",
+      "fee": 0,
+      "processingTime": "Instant",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "KRA PIN",
+        "P9 form (employees)",
+        "Financial statements (businesses)"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": true
+    },
+    {
+      "id": "x3",
+      "categoryId": "tax",
+      "name": "Tax Compliance Certificate",
+      "desc": "Apply for a Tax Compliance Certificate (TCC) for tenders or employment.",
+      "fee": 0,
+      "processingTime": "Instant – 3 days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "x4",
+      "categoryId": "tax",
+      "name": "Tax Payment (KRA)",
+      "desc": "Generate a payment slip and pay taxes due via M-Pesa, card or bank.",
+      "fee": 0,
+      "processingTime": "Instant",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "x5",
+      "categoryId": "tax",
+      "name": "Customs Services",
+      "desc": "Access import/export duty information and customs declarations.",
+      "fee": 0,
+      "processingTime": "Varies",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "x6",
+      "categoryId": "tax",
+      "name": "PIN Certificate Retrieval",
+      "desc": "Retrieve a lost or forgotten KRA PIN certificate.",
+      "fee": 0,
+      "processingTime": "Instant",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "j1",
+      "categoryId": "justice",
+      "name": "Court Case Search",
+      "desc": "Search the status and cause list of a court case by case number.",
+      "fee": 0,
+      "processingTime": "Instant",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "j2",
+      "categoryId": "justice",
+      "name": "e-Filing of Court Documents",
+      "desc": "File pleadings and documents electronically with the Judiciary.",
+      "fee": 0,
+      "processingTime": "1–2 working days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "j3",
+      "categoryId": "justice",
+      "name": "Legal Resources",
+      "desc": "Access legal guides, statutes and self-help resources.",
+      "fee": 0,
+      "processingTime": "Instant",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "j4",
+      "categoryId": "justice",
+      "name": "Small Claims Court",
+      "desc": "File or track a small claims case (up to KES 1,000,000).",
+      "fee": 1000,
+      "processingTime": "Hearing within 60 days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID",
+        "Statement of claim",
+        "Evidence/receipts"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": true
+    },
+    {
+      "id": "j5",
+      "categoryId": "justice",
+      "name": "Legal Aid Services",
+      "desc": "Apply for state-funded legal aid if you cannot afford representation.",
+      "fee": 0,
+      "processingTime": "5–10 working days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID",
+        "Means-testing declaration",
+        "Case summary"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "j6",
+      "categoryId": "justice",
+      "name": "Certified Court Documents",
+      "desc": "Request certified copies of judgments, orders or rulings.",
+      "fee": 500,
+      "processingTime": "3–5 working days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "a1",
+      "categoryId": "agriculture",
+      "name": "Farmer Registration (KilimoSTAT)",
+      "desc": "Register as a farmer to access government agricultural programs.",
+      "fee": 0,
+      "processingTime": "Instant – 3 days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": true
+    },
+    {
+      "id": "a2",
+      "categoryId": "agriculture",
+      "name": "Agricultural Subsidies",
+      "desc": "Apply for input subsidies including seeds and equipment support.",
+      "fee": 0,
+      "processingTime": "Per season cycle",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "a3",
+      "categoryId": "agriculture",
+      "name": "Fertilizer Subsidy Program",
+      "desc": "Access the e-Voucher system for subsidized fertilizer.",
+      "fee": 0,
+      "processingTime": "Per season",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID",
+        "Farmer registration number",
+        "Land parcel details"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "a4",
+      "categoryId": "agriculture",
+      "name": "Livestock Services",
+      "desc": "Register livestock, request veterinary services and movement permits.",
+      "fee": 200,
+      "processingTime": "1–3 working days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "a5",
+      "categoryId": "agriculture",
+      "name": "Agricultural Licences",
+      "desc": "Apply for licences covering produce trade, milling and export.",
+      "fee": 1500,
+      "processingTime": "5–10 working days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "a6",
+      "categoryId": "agriculture",
+      "name": "Market Information System",
+      "desc": "View real-time crop and livestock market prices by region.",
+      "fee": 0,
+      "processingTime": "Instant",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "c1",
+      "categoryId": "county",
+      "name": "County Business Permits",
+      "desc": "Apply for a single business permit issued by your county government.",
+      "fee": 0,
+      "processingTime": "3–5 working days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": true
+    },
+    {
+      "id": "c2",
+      "categoryId": "county",
+      "name": "County Rates & Levies",
+      "desc": "View and pay county rates, parking and cess levies.",
+      "fee": 0,
+      "processingTime": "Instant",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "c3",
+      "categoryId": "county",
+      "name": "County Business Licences",
+      "desc": "Apply for county-issued sector licences (markets, liquor, health).",
+      "fee": 0,
+      "processingTime": "Varies",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "c4",
+      "categoryId": "county",
+      "name": "Waste Management Services",
+      "desc": "Request garbage collection services or report illegal dumping.",
+      "fee": 0,
+      "processingTime": "1–3 working days",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "c5",
+      "categoryId": "county",
+      "name": "Local Government Services",
+      "desc": "Access ward-level services including social services and bursaries.",
+      "fee": 0,
+      "processingTime": "Varies",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    },
+    {
+      "id": "c6",
+      "categoryId": "county",
+      "name": "County Contacts Directory",
+      "desc": "Find contact details for county offices and departments.",
+      "fee": 0,
+      "processingTime": "Instant",
+      "eligibility": [
+        "Kenyan citizen or legal resident",
+        "Valid identification document"
+      ],
+      "documents": [
+        "National ID or passport",
+        "Passport-size photo"
+      ],
+      "steps": [
+        "Create or log in to your account",
+        "Fill in the application form",
+        "Upload required documents",
+        "Submit and pay any applicable fee",
+        "Track status under My Applications"
+      ],
+      "popular": false
+    }
+  ]
+}

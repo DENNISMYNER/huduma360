@@ -1,0 +1,250 @@
+// Huduma360 database schema
+// PostgreSQL + Prisma
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["queryCompiler", "driverAdapters"]
+  engineType      = "client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ---------- ENUMS ----------
+
+enum Role {
+  USER
+  STAFF
+  ADMIN
+}
+
+enum ApplicationStatus {
+  SUBMITTED
+  PAYMENT_PENDING
+  PROCESSING
+  APPROVED
+  REJECTED
+}
+
+enum PaymentMethod {
+  MPESA
+  CARD
+  BANK
+}
+
+enum PaymentStatus {
+  PENDING
+  SUCCESS
+  FAILED
+}
+
+// ---------- CORE ENTITIES ----------
+
+model User {
+  id                     String    @id @default(uuid())
+  email                  String    @unique
+  passwordHash           String
+  fullName               String
+  nationalId             String?
+  phone                  String?
+  county                 String?
+  role                   Role      @default(USER)
+
+  emailVerified          Boolean   @default(false)
+  emailVerifyToken       String?   @unique
+  emailVerifyExpiresAt   DateTime?
+
+  passwordResetToken     String?   @unique
+  passwordResetExpiresAt DateTime?
+
+  isActive               Boolean   @default(true)
+
+  createdAt              DateTime  @default(now())
+  updatedAt              DateTime  @updatedAt
+
+  applications           Application[]
+  payments               Payment[]
+  notifications          Notification[]
+  savedServices          SavedService[]
+  recentlyViewed         RecentlyViewed[]
+  auditLogs              AuditLog[]
+  statusChangesMade      ApplicationStatusHistory[] @relation("StatusChangedBy")
+
+  @@index([role])
+  @@map("users")
+}
+
+model Category {
+  id          String    @id @default(uuid())
+  slug        String    @unique
+  name        String
+  description String
+  icon        String
+  sortOrder   Int       @default(0)
+
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  services    Service[]
+
+  @@map("categories")
+}
+
+model Service {
+  id              String   @id @default(uuid())
+  slug            String   @unique
+  categoryId      String
+  category        Category @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+
+  name            String
+  description     String
+  feeCents        Int      @default(0) // stored in cents (KES) to avoid float rounding
+  processingTime  String
+  eligibility     Json     // string[]
+  documents       Json     // string[]
+  steps           Json     // string[]
+  isPopular       Boolean  @default(false)
+  isActive        Boolean  @default(true)
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  applications    Application[]
+  savedBy         SavedService[]
+  viewedBy        RecentlyViewed[]
+
+  @@index([categoryId])
+  @@index([isPopular])
+  @@map("services")
+}
+
+model Application {
+  id              String            @id @default(uuid())
+  referenceNumber String            @unique
+
+  userId          String
+  user            User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  serviceId       String
+  service         Service           @relation(fields: [serviceId], references: [id], onDelete: Restrict)
+
+  status          ApplicationStatus @default(SUBMITTED)
+  progress        Int               @default(10)
+  formData        Json              // applicant-submitted form fields (name, idNumber, phone, county, ...)
+
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+
+  payments        Payment[]
+  statusHistory   ApplicationStatusHistory[]
+  notifications   Notification[]
+
+  @@index([userId])
+  @@index([serviceId])
+  @@index([status])
+  @@map("applications")
+}
+
+model ApplicationStatusHistory {
+  id            String            @id @default(uuid())
+  applicationId String
+  application   Application       @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+
+  status        ApplicationStatus
+  note          String?
+
+  changedById   String?
+  changedBy     User?             @relation("StatusChangedBy", fields: [changedById], references: [id], onDelete: SetNull)
+
+  createdAt     DateTime          @default(now())
+
+  @@index([applicationId])
+  @@map("application_status_history")
+}
+
+model Payment {
+  id              String        @id @default(uuid())
+  applicationId   String
+  application     Application   @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+
+  userId          String
+  user            User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  amountCents     Int
+  method          PaymentMethod
+  status          PaymentStatus @default(PENDING)
+  provider        String        // e.g. "mock", "mpesa"
+  transactionRef  String        @unique
+  providerRef     String?       // external provider's own reference, once known
+  failureReason   String?
+
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  @@index([applicationId])
+  @@index([userId])
+  @@index([status])
+  @@map("payments")
+}
+
+model Notification {
+  id            String       @id @default(uuid())
+  userId        String
+  user          User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  applicationId String?
+  application   Application? @relation(fields: [applicationId], references: [id], onDelete: SetNull)
+
+  title         String
+  message       String
+  isRead        Boolean      @default(false)
+
+  createdAt     DateTime     @default(now())
+
+  @@index([userId])
+  @@map("notifications")
+}
+
+model SavedService {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  serviceId String
+  service   Service  @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@unique([userId, serviceId])
+  @@map("saved_services")
+}
+
+model RecentlyViewed {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  serviceId String
+  service   Service  @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  viewedAt  DateTime @default(now())
+
+  @@unique([userId, serviceId])
+  @@map("recently_viewed")
+}
+
+model AuditLog {
+  id         String   @id @default(uuid())
+  userId     String?
+  user       User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  action     String   // e.g. "APPLICATION_CREATED", "USER_ROLE_CHANGED"
+  entityType String   // e.g. "Application", "User", "Service"
+  entityId   String?
+  metadata   Json?
+  ipAddress  String?
+
+  createdAt  DateTime @default(now())
+
+  @@index([userId])
+  @@index([entityType, entityId])
+  @@map("audit_logs")
+}
