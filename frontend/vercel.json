@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://huduma360-backend.onrender.com/api/:path*"
+    }
+  ]
+}
