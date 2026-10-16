@@ -1,3 +1,4 @@
+import { Prisma } from "@prisma/client";
 import { prisma } from "../config/prisma";
 
 interface AuditParams {
@@ -18,7 +19,9 @@ export async function recordAudit(params: AuditParams): Promise<void> {
         action: params.action,
         entityType: params.entityType,
         entityId: params.entityId ?? null,
-        metadata: params.metadata ?? undefined,
+        metadata: params.metadata
+          ? (params.metadata as Prisma.InputJsonValue)
+          : undefined,
         ipAddress: params.ipAddress ?? null,
       },
     });
