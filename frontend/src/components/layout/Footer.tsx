@@ -44,8 +44,9 @@ export default function Footer() {
               Huduma<b>360</b>
             </span>
             <p className="footer-tag">
-              A concept platform demonstrating what a unified Kenyan government services experience could look
-              like. Built as a portfolio project — not affiliated with the Government of Kenya.
+              A concept platform demonstrating what a unified Kenyan government
+              services experience could look like. Built as a portfolio project
+              — not affiliated with the Government of Kenya.
             </p>
           </div>
           <div className="footer-col">
@@ -78,11 +79,16 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <span>&copy; 2026 Huduma360 — a concept project. Not a government website.</span>
+          <span>
+            &copy; 2025 Huduma360 — a concept project. Not a government website.
+          </span>
         </div>
       </footer>
 
-      <InfoModal info={infoKey ? INFO_CONTENT[infoKey] : null} onClose={() => setInfoKey(null)} />
+      <InfoModal
+        info={infoKey ? INFO_CONTENT[infoKey] : null}
+        onClose={() => setInfoKey(null)}
+      />
     </>
   );
 }
